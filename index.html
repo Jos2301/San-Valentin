@@ -10,19 +10,19 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <!-- Escena AR -->
-    <a-scene embedded arjs="trackingMethod: best;">
+    <a-scene embedded arjs>
       <!-- Definir el Image Target con NFT -->
       <a-nft 
         type="nft" 
-        url="IMG/NFT/San_Valentin"  <!-- Ruta base sin extensión -->
+        url="IMG/NFT/San_Valentin"
         smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5">
+        smoothcount="10"
+        smoothtolerance="0.01"
+        smooththreshold="5">
         
         <!-- Objeto 3D que aparecerá al detectar el target -->
         <a-entity 
-          gltf-model="MODELS/Flores.fbx"  <!-- Asegúrate de tener este modelo o cámbialo -->
+          gltf-model="MODELS/Flores.fbx"
           position="0 0 0"
           rotation="0 0 0"
           scale="0.5 0.5 0.5">
