@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AR.js - Image Target</title>
+    <!-- Cargar A-Frame -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- Cargar AR.js para A-Frame -->
+    <script src="https://unpkg.com/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <!-- Escena AR -->
+    <a-scene embedded arjs="trackingMethod: best;">
+      <!-- Definir el Image Target con NFT -->
+      <a-nft 
+        type="nft" 
+        url="IMG/NFT/San_Valentin"  <!-- Ruta base sin extensión -->
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance="0.01"
+        smoothThreshold="5">
+        
+        <!-- Objeto 3D que aparecerá al detectar el target -->
+        <a-entity 
+          gltf-model="MODELS/Flores.fbx"  <!-- Asegúrate de tener este modelo o cámbialo -->
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.5 0.5 0.5">
+        </a-entity>
+      </a-nft>
+
+      <!-- Cámara AR -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
